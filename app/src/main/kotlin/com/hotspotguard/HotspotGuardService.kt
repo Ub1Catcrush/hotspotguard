@@ -1,5 +1,6 @@
 package com.tvcs.hotspotguard
 
+import android.annotation.SuppressLint
 import android.app.*
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
@@ -14,6 +15,7 @@ import android.util.Log
 import androidx.core.app.NotificationCompat
 import java.lang.reflect.Method
 
+@SuppressLint("NewApi")
 class HotspotGuardService : Service() {
 
     companion object {
@@ -33,7 +35,7 @@ class HotspotGuardService : Service() {
     }
 
     private lateinit var wifiManager: WifiManager
-    private lateinit var tetheringManager: TetheringManager
+    private lateinit var tetheringManager: Any
     private lateinit var devicePolicyManager: DevicePolicyManager
     private lateinit var adminComponent: ComponentName
     private lateinit var prefs: SecurityPrefs
@@ -54,7 +56,7 @@ class HotspotGuardService : Service() {
     override fun onCreate() {
         super.onCreate()
         wifiManager         = applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
-        tetheringManager    = getSystemService(TetheringManager::class.java)
+        tetheringManager    = getSystemService("tethering") ?: getSystemService(Context.CONNECTIVITY_SERVICE)
         devicePolicyManager = getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         adminComponent      = ComponentName(this, DeviceAdminReceiver::class.java)
         prefs               = SecurityPrefs(this)
@@ -161,14 +163,17 @@ class HotspotGuardService : Service() {
     }
 
     private fun tryStopTethering() {
-        // Diese Aufrufe haben auf Android 13+ ohne TETHER_PRIVILEGED keinen Effekt.
-        // Sie bleiben als Best-Effort-Fallback und für ältere Android-Versionen.
         try {
-            val m = TetheringManager::class.java
-                .getDeclaredMethod("stopTethering", Int::class.javaPrimitiveType)
-            m.isAccessible = true
-            m.invoke(tetheringManager, TetheringManager.TETHERING_WIFI)
-        } catch (_: Exception) {}
+            // Diese Aufrufe haben auf Android 13+ ohne TETHER_PRIVILEGED keinen Effekt.
+            // Sie bleiben als Best-Effort-Fallback und für ältere Android-Versionen.
+            val tetheringClass = Class.forName("android.net.TetheringManager")
+            val stopTetheringMethod = tetheringClass.getDeclaredMethod("stopTethering", Int::class.javaPrimitiveType)
+            stopTetheringMethod.isAccessible = true
+            // 0 entspricht meist TETHERING_WIFI
+            stopTetheringMethod.invoke(tetheringManager, 0)
+        } catch (e: Exception) {
+            Log.d(TAG, "TetheringManager stop failed: ${e.message}")
+        }
 
         try {
             val wifiConfigClass = Class.forName("android.net.wifi.WifiConfiguration")
