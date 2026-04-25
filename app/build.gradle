@@ -1,0 +1,51 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace='com.tvcs.hotspotguard'
+    compileSdk=36
+
+    defaultConfig {
+        applicationId="com.tvcs.hotspotguard"
+        minSdk=31          // Android 12 minimum (API 31)
+        targetSdk=34
+        versionName="${app_versions.versionMajor}.${app_versions.versionMinor}.${app_versions.versionPatch}"
+        versionCode=app_versions.versionMajor * 1000000 + app_versions.versionMinor * 10000 + app_versions.versionPatch
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled=true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix=".debug"
+            debuggable=true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility=JavaVersion.VERSION_17
+        targetCompatibility=JavaVersion.VERSION_17
+    }
+
+//    kotlinOptions {
+//        jvmTarget = '17'
+//    }
+}
+
+dependencies {
+    // AndroidX Core
+    implementation 'androidx.core:core-ktx:1.18.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+
+    // Material Design
+    implementation 'com.google.android.material:material:1.13.0'
+
+    // CardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // Lifecycle (für Services)
+    implementation 'androidx.lifecycle:lifecycle-service:2.7.0'
+}

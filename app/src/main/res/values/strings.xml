@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">HotspotGuard</string>
+    <string name="accessibility_service_label">HotspotGuard</string>
+    <string name="accessibility_service_description">Überwacht und blockiert Versuche, den WLAN-Hotspot zu aktivieren.</string>
+
+    <!-- Password Screen -->
+    <string name="title_setup">HotspotGuard einrichten</string>
+    <string name="title_verify">HotspotGuard</string>
+    <string name="title_change_password">Passwort ändern</string>
+    <string name="subtitle_setup">Lege ein Passwort fest, um die App zu schützen.</string>
+    <string name="subtitle_verify">Bitte Passwort eingeben.</string>
+    <string name="subtitle_change">Neues Passwort eingeben.</string>
+    <string name="hint_password">Passwort</string>
+    <string name="hint_password_confirm">Passwort bestätigen</string>
+    <string name="btn_setup">Passwort festlegen</string>
+    <string name="btn_unlock">Entsperren</string>
+    <string name="btn_change_password">Passwort ändern</string>
+    <string name="btn_reset_app">App zurücksetzen</string>
+    <string name="err_password_too_short">Passwort muss mindestens 4 Zeichen haben.</string>
+    <string name="err_passwords_mismatch">Passwörter stimmen nicht überein.</string>
+    <string name="err_wrong_password">Falsches Passwort.</string>
+    <string name="err_too_many_attempts">Zu viele Versuche. Bitte warte 30 Sekunden.</string>
+    <string name="msg_password_saved">Passwort gespeichert ✓</string>
+    <string name="service_active">● Aktiv</string>
+    <string name="service_inactive">○ Inaktiv</string>
+    <string name="blocked_count">Blockierte Versuche: %1$d</string>
+
+    <!-- Dashboard Status -->
+    <string name="status_fully_locked">Vollständig gesperrt</string>
+    <string name="status_fully_locked_desc">Device Owner aktiv – Hotspot-UI deaktiviert</string>
+    <string name="status_reactive">Reaktiver Schutz aktiv</string>
+    <string name="status_reactive_desc">Accessibility kann Toggle zurückklappen</string>
+    <string name="status_limited">Eingeschränkter Schutz</string>
+    <string name="status_limited_desc">Accessibility-Service empfohlen</string>
+    <string name="status_inactive">Nicht aktiv</string>
+    <string name="status_inactive_desc">Service deaktiviert</string>
+
+    <!-- Dashboard Labels -->
+    <string name="label_blocked_attempts">Blockierte Versuche</string>
+    <string name="btn_reset_counter">Zurücksetzen</string>
+    <string name="label_protection_settings">Schutz-Einstellungen</string>
+    <string name="label_hotspot_guard">Hotspot-Überwachung</string>
+    <string name="label_hotspot_guard_desc">Kern-Service (immer empfohlen)</string>
+    <string name="label_vpn_protection">VPN-Prozessschutz</string>
+    <string name="label_vpn_protection_desc">Verhindert Beenden durch Family Link</string>
+    <string name="label_accessibility">Accessibility-Service</string>
+    <string name="label_accessibility_desc">Blockiert Hotspot-UI präventiv</string>
+    <string name="label_security">Sicherheit</string>
+
+    <!-- Device Owner -->
+    <string name="device_owner_active">Device Owner aktiv – Hotspot ist systemweit gesperrt</string>
+    <string name="device_owner_inactive">Device Owner nicht aktiv – einmalige ADB-Einrichtung empfohlen</string>
+    <string name="btn_setup_device_owner">Device Owner einrichten (empfohlen)</string>
+    <string name="dialog_device_owner_title">Device Owner einrichten</string>
+    <string name="btn_copy_command">Befehl kopieren</string>
+    <string name="btn_check">Prüfen</string>
+    <string name="btn_close">Schließen</string>
+    <string name="msg_copied">In Zwischenablage kopiert</string>
+    <string name="msg_device_owner_active">✓ Device Owner aktiv!</string>
+    <string name="msg_device_owner_not_yet">Noch nicht aktiv. Bitte ADB-Befehl ausführen.</string>
+
+    <!-- Accessibility Dialog -->
+    <string name="dialog_accessibility_title">Accessibility-Service aktivieren</string>
+    <string name="dialog_accessibility_message">Gehe zu:\nEinstellungen → Eingabehilfe → HotspotGuard → Aktivieren\n\nDanach kann die App den Hotspot-Toggle in den Systemeinstellungen automatisch zurückklappen.</string>
+    <string name="dialog_accessibility_info_title">Accessibility-Service</string>
+    <string name="dialog_accessibility_info_message">Ohne Device Owner ist der Accessibility-Service die beste verfügbare Schutzmaßnahme.\n\nEr erkennt wenn der Nutzer den Hotspot-Toggle in den Systemeinstellungen antippt und klappt ihn sofort zurück.\n\nHinweis: Er kann den Hotspot nicht verhindern wenn er per Quick-Tile oder anderem Weg aktiviert wird.</string>
+    <string name="btn_open_settings">Einstellungen öffnen</string>
+    <string name="btn_cancel">Abbrechen</string>
+    <string name="btn_ok">OK</string>
+
+    <!-- Reset Dialog -->
+    <string name="dialog_reset_title">App zurücksetzen</string>
+    <string name="dialog_reset_message">Hiermit wird das Passwort gelöscht und die App auf den Ausgangszustand zurückgesetzt.\n\nDer Schutz bleibt aktiv bis die App neu eingerichtet wird.\n\nFortfahren?</string>
+    <string name="btn_reset_confirm">Zurücksetzen</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_status_name">HotspotGuard Status</string>
+    <string name="notif_channel_alert_name">HotspotGuard Alarm</string>
+    <string name="notif_title_locked">HotspotGuard [Gesperrt ✓]</string>
+    <string name="notif_title_reactive">HotspotGuard [Reaktiv]</string>
+    <string name="notif_text_locked">Hotspot-UI gesperrt</string>
+    <string name="notif_text_active">Überwachung aktiv</string>
+    <string name="notif_text_blocked">%1$d Versuch blockiert</string>
+    <string name="notif_text_blocked_plural">%1$d Versuche blockiert</string>
+    <string name="notif_alert_title">Hotspot-Versuch blockiert</string>
+    <string name="notif_alert_text">Versuch Nr.%1$d wurde erkannt</string>
+
+    <!-- Dialog layout strings -->
+    <string name="device_owner_why_title">Warum ist das nötig?</string>
+    <string name="device_owner_why_text">Android 13+ erlaubt normalen Apps nicht, einen aktiven Hotspot zu stoppen. Mit dem Device-Owner-Modus kann HotspotGuard die Hotspot-Funktion im System komplett sperren – ohne Root, ohne Einschränkungen.</string>
+    <string name="device_owner_steps_title">Einmalige Einrichtung (PC nötig):</string>
+    <string name="device_owner_step1">USB-Debugging in Entwickleroptionen aktivieren</string>
+    <string name="device_owner_step2">Gerät per USB mit dem PC verbinden</string>
+    <string name="device_owner_step3">Diesen Befehl im Terminal ausführen:</string>
+    <string name="device_owner_after">Danach auf &quot;Prüfen&quot; tippen.</string>
+</resources>
