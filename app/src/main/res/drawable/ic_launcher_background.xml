@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Dark navy background -->
+    <path
+        android:pathData="M0,0 L108,0 L108,108 L0,108 Z"
+        android:fillColor="#0F1F3D" />
+
+    <!-- Subtle grid lines for texture -->
+    <path
+        android:pathData="M0,27 L108,27 M0,54 L108,54 M0,81 L108,81 M27,0 L27,108 M54,0 L54,108 M81,0 L81,108"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="0.3"
+        android:strokeAlpha="0.06" />
+
+</vector>

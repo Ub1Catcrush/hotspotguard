@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Shield body -->
+    <path
+        android:pathData="M54,18 L84,29 L84,56 C84,72 71,82 54,88 C37,82 24,72 24,56 L24,29 Z"
+        android:fillColor="#2563EB"
+        android:strokeColor="#3B82F6"
+        android:strokeWidth="0.5" />
+
+    <!-- Shield inner highlight -->
+    <path
+        android:pathData="M54,18 L84,29 L84,46 C74,46 64,43 54,37 C44,43 34,46 24,46 L24,29 Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.12" />
+
+    <!-- Shield inner border -->
+    <path
+        android:pathData="M54,22 L81,32 L81,56 C81,70 69,79 54,85 C39,79 27,70 27,56 L27,32 Z"
+        android:fillColor="#00000000"
+        android:strokeColor="#60A5FA"
+        android:strokeWidth="0.6"
+        android:strokeAlpha="0.4" />
+
+    <!-- WiFi arc large (greyed) -->
+    <path
+        android:pathData="M36,57 A22,22 0 0 1 72,57"
+        android:fillColor="#00000000"
+        android:strokeColor="#94A3B8"
+        android:strokeWidth="2.8"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.5" />
+
+    <!-- WiFi arc medium (greyed) -->
+    <path
+        android:pathData="M40.5,61 A16,16 0 0 1 67.5,61"
+        android:fillColor="#00000000"
+        android:strokeColor="#94A3B8"
+        android:strokeWidth="2.8"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.5" />
+
+    <!-- WiFi arc small (greyed) -->
+    <path
+        android:pathData="M45.5,65 A10,10 0 0 1 62.5,65"
+        android:fillColor="#00000000"
+        android:strokeColor="#94A3B8"
+        android:strokeWidth="2.8"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.5" />
+
+    <!-- WiFi dot -->
+    <path
+        android:pathData="M54,70 m-2,0 a2,2 0 1 0 4,0 a2,2 0 1 0 -4,0"
+        android:fillColor="#94A3B8"
+        android:fillAlpha="0.5" />
+
+    <!-- Red ban diagonal line -->
+    <path
+        android:pathData="M34,44 L74,76"
+        android:fillColor="#00000000"
+        android:strokeColor="#EF4444"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.93" />
+
+    <!-- Red ban diagonal line highlight -->
+    <path
+        android:pathData="M34,44 L74,76"
+        android:fillColor="#00000000"
+        android:strokeColor="#FCA5A5"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.5" />
+
+    <!-- Lock shackle -->
+    <path
+        android:pathData="M47,63 L47,59 A7,7 0 0 1 61,59 L61,63"
+        android:fillColor="#00000000"
+        android:strokeColor="#F1F5F9"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Lock body -->
+    <path
+        android:pathData="M44,63 L64,63 L64,76 Q64,79 61,79 L47,79 Q44,79 44,76 Z"
+        android:fillColor="#F1F5F9" />
+
+    <!-- Lock keyhole circle -->
+    <path
+        android:pathData="M54,68 m-2.5,0 a2.5,2.5 0 1 0 5,0 a2.5,2.5 0 1 0 -5,0"
+        android:fillColor="#1E40AF" />
+
+    <!-- Lock keyhole stem -->
+    <path
+        android:pathData="M52.5,70.5 L55.5,70.5 L55.5,75 Q55.5,76 54,76 Q52.5,76 52.5,75 Z"
+        android:fillColor="#1E40AF" />
+
+</vector>
