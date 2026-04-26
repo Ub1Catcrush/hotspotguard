@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.tvcs.hotspotguard">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Netzwerk & Hotspot -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -12,7 +11,8 @@
         tools:ignore="ProtectedPermissions" />
 
     <!-- Foreground Service -->
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"
+        tools:ignore="ForegroundServicesPolicy" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
 
