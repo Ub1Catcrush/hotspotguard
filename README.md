@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="app/src/main/res/drawable/ic_shield.xml" width="80" alt="HotspotGuard Shield" />
+<img src="app/src/main/res/android_app_icon_wifi_shield.svg" width="80" alt="HotspotGuard Shield" />
 
 # HotspotGuard
 
